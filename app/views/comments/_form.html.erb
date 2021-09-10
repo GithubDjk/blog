@@ -1,0 +1,14 @@
+<%=form_for([@post , @post.comments.build]) do |form| %>
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_field :message %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :post_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
